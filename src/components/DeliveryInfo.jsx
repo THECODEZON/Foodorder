@@ -3,10 +3,10 @@ import { RxCross2 } from "react-icons/rx";
 
 function DeliveryInfo({ showDeliveryInfo, setShowDeliveryInfo }) {
   return (
-    <div className={`w-full md:w-[40vw] h-[100%] fixed top-0 right-0 bg-white shadow-xl p-6 transition-all duration-500 flex flex-col items-center overflow-auto ${showDeliveryInfo ? "translate-x-0" : "translate-x-full"}`}>
+    <div className={`w-full md:w-[40vw] h-[100%] fixed top-0 right-0 bg-white shadow-xl p-4 sm:p-6 transition-all duration-500 flex flex-col items-center overflow-auto ${showDeliveryInfo ? "translate-x-0" : "translate-x-full"}`}>
       <header className='w-[100%] flex justify-between items-center mb-6'>
-        <span className='text-green-400 text-[18px] font-semibold'>Delivery Information</span>
-        <RxCross2 className='w-[30px] h-[30px] text-green-400 text-[18px] font-semibold cursor-pointer hover:text-gray-600' onClick={() => setShowDeliveryInfo(false)} />
+        <span className='text-yellow-400 text-[16px] sm:text-[18px] font-semibold'>Delivery Information</span>
+        <RxCross2 className='w-[25px] h-[25px] sm:w-[30px] sm:h-[30px] text-yellow-400 text-[16px] sm:text-[18px] font-semibold cursor-pointer hover:text-gray-600' onClick={() => setShowDeliveryInfo(false)} />
       </header>
 
       <div className='w-full flex flex-col gap-6 p-4'>
@@ -14,8 +14,7 @@ function DeliveryInfo({ showDeliveryInfo, setShowDeliveryInfo }) {
           <h3 className='text-lg font-semibold text-gray-700 mb-2'>Address:</h3>
           <p className='text-gray-600'>
             Flat No. 302, Shanti Residency<br />
-            MG Road, Sector 21<br />
-            Gurugram, Haryana – 122001<br />
+            Gurugram<br />
             India
           </p>
         </div>
@@ -27,12 +26,12 @@ function DeliveryInfo({ showDeliveryInfo, setShowDeliveryInfo }) {
 
         <div className='w-full'>
           <h3 className='text-lg font-semibold text-gray-700 mb-2'>Delivery Partner:</h3>
-          <p className='text-gray-600'>Rahul Sharma</p>
+          <p className='text-gray-600'>Deepa Das</p>
         </div>
 
         <div className='w-full'>
           <h3 className='text-lg font-semibold text-gray-700 mb-2'>Contact Number:</h3>
-          <p className='text-gray-600'>+91 98765 43210</p>
+          <p className='text-gray-600'>6267093990</p>
         </div>
       </div>
     </div>

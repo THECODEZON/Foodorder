@@ -62,7 +62,7 @@ const ImageSlider = () => {
   }, []);
 
   return (
-    <div className="relative w-full h-[400px] md:h-[500px] overflow-hidden rounded-lg shadow-2xl mb-8">
+    <div className="relative w-full h-[300px] sm:h-[400px] md:h-[500px] overflow-hidden rounded-lg shadow-2xl mb-6 sm:mb-8">
       {/* Slides */}
       <div className="relative h-full">
         {slides.map((slide, index) => (
@@ -75,14 +75,14 @@ const ImageSlider = () => {
               alt={slide.title}
               className="w-full h-full object-cover"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex flex-col justify-end p-8">
+            <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex flex-col justify-end p-4 sm:p-8">
               <div className="text-white">
                 <span className="bg-red-500 text-white px-3 py-1 rounded-full text-sm font-bold mb-4 inline-block">
                   {slide.discount}
                 </span>
-                <h2 className="text-3xl md:text-4xl font-bold mb-2">{slide.title}</h2>
-                <p className="text-lg md:text-xl mb-4">{slide.description}</p>
-                <button className="bg-yellow-500 hover:bg-yellow-600 text-white px-6 py-3 rounded-lg font-semibold transition-colors">
+                <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-2">{slide.title}</h2>
+                <p className="text-sm sm:text-base md:text-lg lg:text-xl mb-3 sm:mb-4">{slide.description}</p>
+                <button className="bg-yellow-400 hover:bg-yellow-500 text-white px-4 sm:px-6 py-2 sm:py-3 rounded-lg font-semibold transition-colors text-sm sm:text-base">
                   Order Now
                 </button>
               </div>
@@ -94,15 +94,15 @@ const ImageSlider = () => {
       {/* Navigation Buttons */}
       <button
         onClick={prevSlide}
-        className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white text-gray-800 p-3 rounded-full shadow-lg transition-all"
+        className="absolute left-2 sm:left-4 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white text-gray-800 p-2 sm:p-3 rounded-full shadow-lg transition-all"
       >
-        <FaChevronLeft size={20} />
+        <FaChevronLeft size={16} className="sm:w-5 sm:h-5" />
       </button>
       <button
         onClick={nextSlide}
-        className="absolute right-4 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white text-gray-800 p-3 rounded-full shadow-lg transition-all"
+        className="absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white text-gray-800 p-2 sm:p-3 rounded-full shadow-lg transition-all"
       >
-        <FaChevronRight size={20} />
+        <FaChevronRight size={16} className="sm:w-5 sm:h-5" />
       </button>
 
       {/* Dots Indicator */}
